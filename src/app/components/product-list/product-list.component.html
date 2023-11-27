@@ -1,0 +1,6 @@
+<p *ngFor = "let list of products">
+    {{list.name}} : {{list.unitPrice | currency : 'USD'}}
+</p>
+<!-- <p *ngFor = "let list of products">
+    {{list.description}} : {{list.unitPrice}}
+</p> -->

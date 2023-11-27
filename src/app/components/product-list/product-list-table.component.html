@@ -1,0 +1,29 @@
+<table class="table">
+    <thead class="table-dark">
+        <tr>
+            <th></th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Units in Stock</th>
+            <th>Description</th>
+            <th>Qty</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let list of products">
+            <td class="align-middle">
+                <img src="{{list.imageUrl}}" height="10"></td>
+            <td class="align-middle">{{list.name}}</td>
+            <td class="align-middle">{{list.unitPrice | currency : 'USD'}}</td>
+            <td class="align-middle">{{list.unitsInStock}}</td>
+            <td class="align-middle">{{list.description}}</td>
+            <td class="align-middle"><input type="number" ></td>
+            <td class="align-middle"><button class="au-btn-submit" >Buy</button></td>
+        </tr>
+    </tbody>
+</table>
+<!-- <p *ngFor = "let list of products">
+    {{list.name}} : {{list.unitPrice | currency : 'USD'}}
+</p> -->
+
